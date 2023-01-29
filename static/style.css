@@ -1,0 +1,780 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --backgroundColor: rgb(34, 32, 32);
+    --clr1: plum;
+    --clr2: #2d977b;
+    --clr3: #8AD7C3;
+}
+
+
+body {
+    margin: 0; 
+    padding: 0;
+    background-color: var(--backgroundColor);
+    font-family: Oswald;
+    font-size: 14px;
+    color: #8AD7C3;
+    height: 100%;
+}
+
+.preloader {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+}
+
+#loading {
+    display: flex;
+    position: relative;
+    font-size: 30px;
+    font-weight: 600;
+    text-shadow: 0 0 20px var(--clr3);
+}
+
+.load {
+    width: 25rem;
+    height: 25rem;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    animation: scale 5s linear infinite;
+}
+
+.load span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-left: 3px solid var(--clr1);
+    border-right: 3px solid var(--clr2);
+    border-radius: 37% 61% 63% 35% / 42% 34% 64% 56%;
+    animation: rotate 3s linear infinite;
+}
+
+.load span:nth-child(1) {
+    animation: rotate 6s linear infinite reverse;
+}
+
+.load span:nth-child(2) {
+    animation: rotate 9s linear infinite;
+}
+
+.load span:nth-child(3) {
+    animation: rotate 12s linear infinite reverse;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+#body {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: #8AD7C3;
+}
+
+.header {
+    display: flex;
+    height: 3rem;
+    width: 75%;
+    background-color: rgb(34, 32, 32);
+    margin: 0 auto;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.logo {
+    justify-self: flex-start;
+    position: relative;
+    padding: 0 12px 3px 0;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    color: #8AD7C3;
+}
+
+.logo::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #FBD800;
+    border-radius: 50%;
+}
+
+.secondary-navbar {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+}
+
+.secondary-navbar a {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    text-decoration: none;
+    display: none;
+}
+
+.nav-button img{
+    width: 35px;
+    height: 35px;
+}
+
+.active {
+    color: #2d977b;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+    width: 75%;
+    justify-content: space-between;
+}
+
+#con-ab-me {
+    margin-top: 3rem;
+}
+
+#con-skills {
+    margin-top: 3rem;
+}
+
+#con-contact-me {
+    margin-top: 0;
+}
+
+.title h1 {
+    font-weight: 700;
+    font-size: 55px;
+    margin-bottom: -1rem;
+}
+
+.title p {
+    font-weight: 400;
+    font-size: 30px;
+}
+
+#contact-text {
+    width: 70%;
+    font-size: 17px;
+}
+
+#about-me {
+    width: 70%;
+    font-size: 20px;
+}
+
+#about-me a {
+    color:#2d977b;
+}
+
+#about-skills {
+    width: 75%;
+    font-size: 20px;
+}
+
+.description {
+    font-weight: 300;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 7rem;
+}
+
+.skill-name {
+    font-size: 17px;
+    font-weight: 400;
+    margin: 1rem 0;
+    color: plum;
+}
+
+.skill-bar {
+    width: 20rem;
+    height: 0.2rem;
+    background: rgb(26, 24, 24);
+    border-radius: 3px;
+}
+
+.skill-per {
+    height: 0.2rem;
+    background: plum;
+    border-radius: 3px;
+    position: relative;
+    animation: fillBars 2.5s 1;
+}
+
+.skill-per::before {
+    content: attr(per);
+    position: absolute;
+    font-size: 12px;
+    top: -1.5rem;
+    right: 0;
+    transform: translateX(50%);
+}
+
+@keyframes fillBars {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.footer {
+    display: flex;
+    width: 55%;
+    background-color: rgb(34, 32, 32);
+    border-top: solid 1px;
+    position: absolute;
+    bottom: 0;
+    left: 22.5vw;
+}
+
+.bt-auto {
+    bottom: auto;
+}
+
+.footbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footbar p {
+    font-weight: 300px;
+    font-size: 18px;
+}
+
+.social {
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+}
+
+.social-item {
+    width: 55px;
+    height: 55px;
+}
+
+#CV {
+    display: flex;
+    align-self: center;
+    margin-right: 7rem;
+}
+
+#visit-btn {
+    display: flex;
+    align-self: flex-end;
+    margin-right: 7rem;
+}
+
+.project-img {
+    height: 250px;
+    width: 500px;
+    margin-bottom: 1rem;
+}
+
+
+.contact-btn {
+    background: none;
+    border: none;
+    margin-top: 50px 0 0;
+    text-decoration: none;
+    width: 100%;
+    max-width: 10rem;
+    height: 3rem;
+    display: block;
+    line-height: 3rem;
+    letter-spacing: 2px;
+    position: relative;
+    text-align: center;
+    color: #8AD7C3;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.contact-btn div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+}
+
+.contact-btn span.bg {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    left: -5px;
+    top: 0;
+    transition: all .3s ease-in-out;
+    background-color: #8AD7C3;
+    transform: skewX(-19deg);
+}
+
+.contact-btn:hover span.bg {
+    width: 110%;
+}
+
+.contact-btn span.base {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    border: 2px solid #8AD7C3;
+    box-sizing: border-box; 
+}
+
+.contact-btn span.text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.contact-btn:hover span.text {
+    color: rgb(34, 32, 32);
+}
+
+.contact-btn:hover span.text a {
+    color: rgb(34, 32, 32);
+}
+
+.form-input-group {
+    width: 100%;
+    position: relative;
+}
+
+.form-input-group input, textarea {
+    width: 100%;
+    height: 3rem;
+    outline: none;
+    border: none;
+    padding: 0 2rem;
+    margin-bottom: 0.5rem;
+    font-family: Oswald;
+    font-size: 0.957rem;
+    box-shadow: 0 0 0px 1000px rgb(27, 25, 25) inset;
+    color: #8a8484;
+}
+
+.form-input-group textarea {
+    height: 20vh;
+    padding: 10px, 20px;
+}
+
+.submit-btn {
+    margin-top: 0.5rem;
+    float: left;
+    display: block;
+    cursor: pointer;
+}
+
+.form-input-group input + span::after, .form-input-group textarea + span::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    position: absolute;
+    background-color: #5b8e7f;
+    bottom: 5px;
+    left: 0;
+    transition: all 0.3s linear;
+}
+
+.form-input-group input:focus + span::after, .form-input-group textarea:focus + span::after {
+    width: 100%;
+}
+
+.google-map {
+    position: relative; 
+    width: 100%;
+    margin-top: 4rem;
+    margin-left: 3rem;
+}
+
+.google-map iframe {
+    width: 100%;
+    margin-top: 3rem;
+    height: 60vh;
+}
+
+.map-content {
+    background-color: rgb(27, 25, 25);
+    color: #f3f3f3;
+    position: absolute;
+    padding: 5px 5px 5px 5px;
+    top: 3.5rem;
+    left: 0.5rem;
+    backdrop-filter: blur(70%);
+}
+
+.map-content span {
+    line-height: 1.5rem;
+}
+
+.error input, .error textarea {
+    border-bottom: 2px red solid;
+    transition: all .2s linear;
+}
+
+.success input, .success textarea {
+    border-bottom: 2px solid rgb(14, 207, 14);
+    transition: all .2s linear;
+}
+
+.message {
+    position: absolute;
+    top: 35rem;
+    right: 0;
+    transition: all .3s ease-in-out;
+    transition: translate(100%, 50%);
+    transition: all .3s linear;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.message-content {
+    padding: 15px;
+    background: red;
+    color: #fff;
+    opacity: 1;
+    transition: opacity 550ms ease-in-out;
+    margin-bottom: 5px;
+}
+
+.message-content.hide {
+    opacity: 0;
+}
+
+@media (min-width: 979px) and (max-width: 1250px){
+
+    .secondary-navbar a {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .logo{
+        font-size: 27px;
+        font-weight: 600;
+    }
+
+    .container {
+        margin-top: 7rem;
+    }
+
+    .title h1 {
+        font-weight: 500;
+        font-size: 45px;
+    }
+
+    .title p {
+        font-weight: 300;
+        font-size: 25px;
+    }
+
+    .footbar p {
+        font-size: 15px;
+    }
+
+    .social {
+        width: 250px;
+    }
+
+    .social-item {
+        width: 45px;
+        height: 45px;
+    }
+
+    #myCanvas {
+        width: 400px;
+        height: 400px;
+    }
+
+    #about-me{
+        font-size: 18px;
+    }
+
+    #title-ab-me {
+        font-size: 42px;
+    }
+
+    .skills{
+        margin-right: 3rem;
+    }
+
+    .skill-bar{
+        width: 15rem;
+    }
+
+    #h-skills{
+        font-weight: 600;
+        font-size: 42px;
+    }
+
+    .pr-h1 {
+        font-weight: 500;
+        font-size: 42px;
+    }
+
+    .pr-p {
+        font-size: 15px;
+        font-weight: 200;
+    }
+
+    .project-img {
+        width: 400px;
+        height: 180px;
+    }
+}
+@media (min-width: 768px) and (max-width: 979px){
+
+    .secondary-navbar a {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .logo{
+        font-size: 23px;
+        font-weight: 500;
+    }
+
+    .container {
+        margin-top: 7rem;
+    }
+
+    .title h1 {
+        font-weight: 500;
+        font-size: 35px;
+    }
+
+    .title p {
+        font-weight: 300;
+        font-size: 20px;
+    }
+
+    #CV {
+        margin-right: 2rem;
+    }
+
+    .text a {
+        font-size: 13px;
+    }
+
+    .footbar p {
+        font-size: 13px;
+    }
+
+    .social {
+        width: 200px;
+    }
+
+    .social-item {
+        width: 35px;
+        height: 35px;
+    }
+
+    #myCanvas {
+        width: 300px;
+        height: 300px;
+    }
+
+    .skills-charts {
+        align-self: center;
+        justify-self: center;
+    }
+
+    #about-me{
+        font-size: 15px;
+    }
+
+    #title-ab-me {
+        font-size: 35px;
+    }
+
+    .skills{
+        margin-right: 3rem;
+    }
+
+    .skill-bar{
+        width: 15rem;
+    }
+
+    #h-skills{
+        font-weight: 600;
+        font-size: 35px;
+    }
+
+    .pr-h1 {
+        font-weight: 500;
+        font-size: 35px;
+    }
+
+    .pr-p {
+        font-size: 15px;
+        font-weight: 200;
+    }
+
+    .project-img {
+        width: 300px;
+        height: 150px;
+    }
+
+    .img {
+        margin-left: 2rem;
+    }
+
+    .google-map iframe {
+        height: 40vh;
+        align-self: center;
+        justify-self: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .load{
+        width: 19rem;
+        height: 19rem;
+    }
+
+    .secondary-navbar{
+        display: none;
+    }
+
+    .nav-button {
+        display: block;
+    }
+
+    .secondary-navbar.open{
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: var(--backgroundColor);
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        padding: 46px 30px;
+    }
+
+    .secondary-navbar.open a {
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    .nav-button {
+        float: right;
+        z-index: 9;
+    }
+
+    .footer {
+        bottom: auto;
+    }
+
+    .footbar p {
+        display: none;
+    }
+
+    .social {
+        margin-top: 0.5rem;
+        width: 100vw;
+    }
+
+    .social-item {
+        width: 35px;
+        height: 35px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-content: space-between;
+    }
+
+    .title h1 {
+        font-weight: 500;
+        font-size: 35px;
+    }
+
+    .title p {
+        font-weight: 300;
+        font-size: 20px;
+    }
+
+    #index-title {
+        margin-bottom: 10rem;
+    }
+
+    canvas {
+        width: 300px;
+        height: 300px;
+    }
+
+    .skill-bar{
+        width: 15rem;
+    }
+
+    .skills{
+        margin-right: 3rem;
+    }
+    
+    .project-img {
+        width: 300px;
+        height: 150px;
+    }
+
+    .google-map {
+        margin-left: 0;
+    }
+
+    .google-map iframe {
+        height: 40vh;
+        align-self: center;
+        justify-self: center;
+    }
+}

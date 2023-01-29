@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Contact Me</title>
+</head>
+<body>
+    <div class="preloader">
+        <div class="load">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <div id="loading">Loading...</div>
+        </div>
+    </div>
+    <div id="body">
+        <header class="header">
+            <nav class="navbar">
+                <a href="./index.html" class="logo">Kravets</a>
+                <div class="secondary-navbar" id="nav">            
+                    <a href="./index.html">Home</a>
+                    <a href="./About_Author.html">About author</a>
+                    <a href="./skills.html">Skills</a>
+                    <a href="./projects.html">Projects</a>
+                    <a href="./contact_me.html" class="active">Contact me</a>
+                    <a href="./tech.html">Tech</a>
+                </div>
+                <button class="nav-button" id="nav-btn">
+                    <img id="nav-btn-img" src="../static/files/img/navigation/navbtn.png">
+                </button>
+            </nav>
+        </header>
+
+        <div class="container" id="con-contact-me">
+            <div class="title">
+                <h1>Contact me!</h1>
+                <p id="contact-text"> I'm interested in opportunities to work in great companies, doing fancy projects. However, if you have any requests or questions, don't hesitate to use the form or contact me in my social media.</p>
+                <form class="contact-form">
+                
+                    <div class="form-input-wrapper">
+
+                        <div class="form-input-group">
+                            <input type="text" placeholder="Name" name="name" class="name">
+                            <span></span>
+                        </div>
+                        <div class="form-input-group">
+                            <input type="email" placeholder="Email" name="email" class="email">
+                            <span></span>
+                        </div>
+                        <div class="form-input-group">
+                            <input type="text" placeholder="Subject" name="subject" class="subject">
+                            <span></span>
+                        </div>
+                        <div class="form-input-group">
+                            <textarea type="text" placeholder="Message" class="textarea" name="message"></textarea>
+                            <span></span>
+                        </div>
+                        <div class="message"></div>
+                        <button type="submit" class="contact-btn submit-btn">
+                            <div>
+                                <span class="bg"></span>
+                                <span class="base"></span>
+                                <span class="text">
+                                    Send message!
+                                </span>
+                            </div>
+                        </button>
+                    </div>
+            
+                </form>
+            </div>
+
+            <div class="google-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13642.420918233065!2d34.78511565!3d31.25935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sil!4v1673531876812!5m2!1sen!2sil" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="map-content">
+                    <span>Daniel Zharikov<br>Israel, Be'er-Sheva</span>
+                    <br>
+                    <span><span style="color:#8AD7C3;">@:</span> dan.zharikow2017@yandex.ru</span>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <footer class="footer bt-auto">
+            <div class="footbar">
+                <p class="name">Daniel Zharikov<br>Web developer</p>
+                <div class="social">
+                    <a href="https://discord.gg/dv36NFsnqk" target="_blank"><img src="../static/files/img/socials/discord.png" class="social-item"></img></a>
+                    <a href="https://www.facebook.com/profile.php?id=100089003058327" target="_blank"><img src="../static/files/img/socials/facebook.png" class="social-item"></img></a>
+                    <a href="https://github.com/DanikKravets" target="_blank"><img src="../static/files/img/socials/github.png" class="social-item"></img></a>
+                    <a href="https://www.linkedin.com/in/daniel-zharikov-b824b0261/" target="_blank"><img src="../static/files/img/socials/linkedin.png" class="social-item"></img></a>
+                </div>
+            </div>
+        </footer>
+
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+        <script src="../scripts/contact_me.js"></script>
+        <script src='../scripts/navbar_mobile.js'></script>
+    </div>
+</body>
+</html>

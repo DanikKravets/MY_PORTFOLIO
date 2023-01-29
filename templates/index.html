@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Kravets Developer</title>
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="load">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <div id="loading">Loading...</div>
+        </div>
+    </div>
+     <div id="body">
+        <header class="header">
+            <nav class="navbar">
+                <a href="./index.html" class="logo">Kravets</a>
+                <div class="secondary-navbar" id="nav">            
+                    <a href="./index.html"  class="active">Home</a>
+                    <a href="./About_Author.html">About author</a>
+                    <a href="./skills.html">Skills</a>
+                    <a href="./projects.html">Projects</a>
+                    <a href="./contact_me.html">Contact me</a>
+                    <a href="./tech.html">Tech</a>
+                </div>
+                <button class="nav-button" id="nav-btn">
+                    <img id="nav-btn-img" src="../static/files/img/navigation/navbtn.png">
+                </button>
+            </nav>
+        </header>
+    
+        <div class="container">
+            <div class="title" id="index-title">
+                <h1>Hi, I'm Daniel,<br>
+                    Web developer.<br> 
+                    And that's my portfolio
+                </h1>
+                <p>Full Stack Developer / Student</p>
+            </div>
+            <button class="contact-btn" id="CV">
+                <div>
+                    <span class="bg"></span>
+                    <span class="base"></span>
+                    <span class="text">
+                        <a href="./files/CV Daniel Zharikov.pdf" download>Download My CV</a>
+                    </span>
+                </div>
+            </button>
+        </div>
+    
+        <footer class="footer">
+            <div class="footbar">
+                <p class="name">Daniel Zharikov<br>Web developer</p>
+                <div class="social">
+                    <a href="https://discord.gg/dv36NFsnqk" target="_blank"><img src="../static/files/img/socials/discord.png" class="social-item"></img></a>
+                    <a href="https://www.facebook.com/profile.php?id=100089003058327" target="_blank"><img src="../static/files/img/socials/facebook.png" class="social-item"></img></a>
+                    <a href="https://github.com/DanikKravets" target="_blank"><img src="../static/files/img/socials/github.png" class="social-item"></img></a>
+                    <a href="https://www.linkedin.com/in/daniel-zharikov-b824b0261/" target="_blank"><img src="../static/files/img/socials/linkedin.png" class="social-item"></img></a>
+                </div>
+            </div>
+        </footer>
+        <script>
+            preloader = document.querySelector('.preloader')
+
+            setTimeout(() => {
+                body.style.display = 'block'
+                preloader.style.display = 'none'
+            }, 1000)
+        </script>
+        <script src='../scripts/navbar_mobile.js'></script>
+
+    </div> 
+
+</body>
+</html>

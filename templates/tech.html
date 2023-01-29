@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>About this site</title>
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="load">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <div id="loading">Loading...</div>
+        </div>
+    </div>
+     <div id="body">
+        <header class="header">
+            <nav class="navbar">
+                <a href="./index.html" class="logo">Kravets</a>
+                <div class="secondary-navbar" id="nav">            
+                    <a href="./index.html">Home</a>
+                    <a href="./About_Author.html">About author</a>
+                    <a href="./skills.html">Skills</a>
+                    <a href="./projects.html">Projects</a>
+                    <a href="./contact_me.html">Contact me</a>
+                    <a href="./tech.html" class="active">Tech</a>
+                </div>
+                <button class="nav-button" id="nav-btn">
+                    <img id="nav-btn-img" src="../static/files/img/navigation/navbtn.png">
+                </button>
+            </nav>
+        </header>
+    
+        <div class="container" id="con-tech">
+            <div class="title">
+                <h1>A little about this web-site</h1>
+                <p>I haven't finished this yet.<br>But i should drop it to the web now.<br>By the end of January I will finish It.</p>
+            </div>
+            <div class="description"><p>Now this web site was developed using only front-end technologies:<br>JS, CSS and HTML.<br> I know how to make backend using Django,<br>But I don't know how to upload it to the hosting yet.<br>As you already know I'm studying at YandexPracticum<br>So by the end of Januar I will update this web site with<br>Back-end side and responsive design</p></div>
+        </div>
+    
+        <footer class="footer">
+            <div class="footbar">
+                <p class="name">Daniel Zharikov<br>Web developer</p>
+                <div class="social">
+                    <a href="https://discord.gg/dv36NFsnqk" target="_blank"><img src="../static/files/img/socials/discord.png" class="social-item"></img></a>
+                    <a href="https://www.facebook.com/profile.php?id=100089003058327" target="_blank"><img src="../static/files/img/socials/facebook.png" class="social-item"></img></a>
+                    <a href="https://github.com/DanikKravets" target="_blank"><img src="../static/files/img/socials/github.png" class="social-item"></img></a>
+                    <a href="https://www.linkedin.com/in/daniel-zharikov-b824b0261/" target="_blank"><img src="../static/files/img/socials/linkedin.png" class="social-item"></img></a>
+                </div>
+            </div>
+        </footer>
+        <script>
+            preloader = document.querySelector('.preloader')
+
+            setTimeout(() => {
+                body.style.display = 'block'
+                preloader.style.display = 'none'
+            }, 1000)
+        </script>
+        <script src='../scripts/navbar_mobile.js'></script>
+
+    </div> 
+
+</body>
+</html

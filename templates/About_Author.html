@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>About Author</title>
+</head>
+<body>
+    <div class="preloader">
+        <div class="load">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <div id="loading">Loading...</div>
+        </div>
+    </div>
+    <div id="body">
+        <header class="header">
+            <nav class="navbar">
+                <a href="./index.html" class="logo">Kravets</a>
+                <div class="secondary-navbar" id="nav">            
+                    <a href="./index.html">Home</a>
+                    <a href="./About_Author.html" class="active">About author</a>
+                    <a href="./skills.html">Skills</a>
+                    <a href="./projects.html">Projects</a>
+                    <a href="./contact_me.html">Contact me</a>
+                    <a href="./tech.html">Tech</a>
+                </div>
+                <button class="nav-button" id="nav-btn">
+                    <img id="nav-btn-img" src="../static/files/img/navigation/navbtn.png">
+                </button>
+            </nav>
+        </header>
+
+        <section class="container" id="con-ab-me">
+            <div class="title">
+                <h1 id="title-ab-me">A little about Me</h1>
+                <p id="about-me">In summer of 2022 I've realized that I'm really enjoying web development. I started learning backend development at <a href="https://practicum.yandex.ru/profile/backend-developer/" target="_blank">YandexPracticum</a>. There I'm studying Pyhton, Django. <br>
+                Also, now I'm studying JS, Node JS, CSS, HTML, React JS. <br>
+                I wish to receive an offer from a great company and grow as a professional.<br>
+                I am very communicative person. I like working in a team.<br>
+                My hobbies: photography, cooking, Hebrew teaching</p>
+         </div>
+            <div class="skills-charts">
+                <div id="MyCanvasContainer">
+                    <canvas width="500" height="500" id="myCanvas">
+                        <ul id="tags">
+                            <li><a href="#!">Django</a></li>
+                            <li><a href="#!">HTML</a></li>
+                            <li><a href="#!">CSS</a></li>
+                            <li><a href="#!">JS</a></li>
+                            <li><a href="#!">Node JS</a></li>
+                            <li><a href="#!">React JS</a></li>
+                            <li><a href="#!">Python</a></li>
+                            <li><a href="#!">Git</a></li>
+                            <li><a href="#!">SQL</a></li>
+                            <li><a href="#!">Bootstrap</a></li>
+                            <li><a href="#!">Unittest</a></li>
+                            <li><a href="#!">Pythonanywhere</a></li>
+                        </ul>
+                    </canvas>
+                </div>
+            </div>
+        </section>
+
+
+
+        <footer class="footer">
+            <div class="footbar">
+                <p class="name">Daniel Zharikov<br>Web developer</p>
+                <div class="social">
+                    <a href="https://discord.gg/dv36NFsnqk" target="_blank"><img src="../static/files/img/socials/discord.png" class="social-item"></img></a>
+                    <a href="https://www.facebook.com/profile.php?id=100089003058327" target="_blank"><img src="../static/files/img/socials/facebook.png" class="social-item"></img></a>
+                    <a href="https://github.com/DanikKravets" target="_blank"><img src="../static/files/img/socials/github.png" class="social-item"></img></a>
+                    <a href="https://www.linkedin.com/in/daniel-zharikov-b824b0261/" target="_blank"><img src="../static/files/img/socials/linkedin.png" class="social-item"></img></a>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+        <script src="../scripts/jquery.tagcanvas.js"></script>
+        <script src="../scripts/about_author.js"></script>
+        <script src='../scripts/navbar_mobile.js'></script>
+    </div>
+</body>
+</html>
